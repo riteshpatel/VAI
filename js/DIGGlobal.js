@@ -4,6 +4,7 @@
 @version 1.0
 @last-modified 01/26/2012
 * Class to hold application wide global objects and variables
+* This file is on GIT now.
 */
 Ext.define('DIGGlobal', {
 	rootUrl:'http://digdev.visualanalytics.com',
