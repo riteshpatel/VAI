@@ -1,0 +1,45 @@
+<style type="text/css">
+
+.wireframemenu{
+background-color: white;
+border-bottom-width: 0;
+width: 170px;
+border:0;
+}
+
+* html .wireframemenu{ /*IE only rule. Original menu width minus all left/right paddings */
+width: 164px;
+}
+
+.wireframemenu ul{
+padding: 0;
+margin: 0;
+list-style-type: none;
+border:0;
+}
+
+.wireframemenu a{
+font: bold 13px Verdana;
+padding: 4px 3px;
+display: block;
+width: 100%; /*Define width for IE6's sake*/
+color: white;
+text-decoration: none;
+border-bottom: 1px solid #C0C0C0;
+background-color:#2E6397;
+}
+
+.wireframemenu a:visited{
+color: white;
+}
+
+html>body .wireframemenu a{ /*Non IE rule*/
+width: auto;
+}
+
+.wireframemenu a:hover{
+background-color: #0099cc;
+color: white;
+}
+
+</style>

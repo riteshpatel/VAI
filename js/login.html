@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Digital Information Gateway (DIG)</title>
+	<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+	<script type="text/javascript" src="extjs/ext-all-debug.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type='text/JavaScript'>
+    	function submitForm(){
+			var frm = document.digFrm;
+			var name = frm.user.value;
+			var pass = frm.pass.value;
+
+			if($.trim(name) == ''){
+				alert('You must enter a valid user name!');
+			}else if($.trim(pass) == ''){
+				alert('You must enter a correct password!');
+			}else{
+				SoapCall(name,pass);
+			}
+    	}
+    </script>
+    <style type="text/css">
+        td
+        {
+            color: Black;
+            font-family: Verdana, Arial, helvetica;
+            font-weight: normal;
+            font-size: 9pt;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .whitelabel
+        {
+            color: white;
+            font-family: Verdana, Arial, helvetica;
+            font-weight: normal;
+            font-size: 9pt;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .buttonlabel
+        {
+            color: black;
+            font-family: Verdana, Arial, helvetica;
+            font-weight: normal;
+            font-size: 9px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .white10pxlabel
+        {
+            color: white;
+            font-family: Verdana, Arial, helvetica;
+            font-weight: normal;
+            font-size: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+    </style>
+
+</head>
+<body link="#336699" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" onLoad="document.digFrm.user.focus();">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr bgcolor="#336699">
+                        <td background="images/HeaderBG.jpg" style="background-repeat: no-repeat;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="45%">
+                                        <a href="http://www.visualanalytics.com" title="Visual Analytics Inc. Home">
+                                            <img src="images/DCS_Title.png" alt="" border="0">
+                                    </td>
+                                    <td width="55%">
+
+									<form name='digFrm'>
+												<table cellspacing="0">
+                                                <tr>
+                                                    <td class="whitelabel">
+                                                        <label for="username">
+                                                            User Name</label>
+                                                    </td>
+                                                    <td class="whitelabel">
+                                                        <label for="pass">
+                                                            Password</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="user" name="user" type="text" value="" />
+                                                    </td>
+                                                    <td><input id="pass" name="pass" type="password" value="" />
+                                                    </td>
+                                                    <td width="120" style="padding-left:4px;">
+                                                        <input type="submit" value="Login" tabindex="3" onclick="submitForm();return false">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="180">
+                                                        <br>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://support.visualanalytics.com">
+                                                            <font class="white10pxlabel">Request an Account</font></a>
+                                                    </td>
+                                                    <td NOWRAP>
+                                                        <a href="http://support.visualanalytics.com" rel="nofollow"><font class="white10pxlabel">Forgot your password?</font></a>
+                                                    </td>
+                                                    <td>
+                                                        <br>
+                                                    </td>
+                                                </tr>
+                                            </table>
+											</form>
+											</td>
+		                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/Main.jpg" style="background-repeat: no-repeat;">
+                    <tr>
+                        <td width="60%" height="350" rowspan="2">
+                            &nbsp;
+                        </td>
+                        <td width="40%" rowspan="0" valign="top">
+                            <br>
+                        </td>
+                        <td width="10%" rowspan="2" align="right" valign="top">
+                            <img src="images/Eye2x2.png" alt="" hspace="0" vspace="0" border="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <img src="images/VisualAnalyticsLogoPt75wX3-5h.gif" alt="" border="0">&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td colspan="3">
+                            <hr width="100%" size="1" color="#C0C0C0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <div id="pageFooter">
+                                &nbsp;Visual Analytics Inc. 2011 <a href="http://www.visualanalytics.com" title="Visual Analytics Website">
+                                    Home</a> <a href="http://support.visualanalytics.com" title="VisuaLinks Support">Support</a>
+                                <a href="http://www.visualanalytics.com/aboutus/index.cfm" title="About Visual Analytics Inc.">
+                                    About</a> <a href="http://www.visualanalytics.com/aboutus/privacy.cfm" title="Learn about your privacy">
+                                        Privacy</a> <a href="http://www.visualanalytics.com/aboutus/terms.cfm" title="Review our terms of service.">
+                                            Terms</a> <a href="http://support.visualanalytics.com/help" title="Visit our Help.">
+                                                Help</a>&nbsp;&nbsp;
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+

@@ -1,0 +1,95 @@
+body {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: #ccc;
+	background-color: white;
+	text-align: center;
+	/* part 1 of 2 centering hack */
+	}
+#content {
+	width: 960px; 
+	padding: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto; 	
+	/* opera does not like 'margin:20px auto' */
+	background: white;
+	border: 1px solid #0063AD;
+	text-align:center; 
+	/* part 2 of 2 centering hack */
+	width: 960px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 370px;
+	}
+html>body #content {
+	width: 960px; /* ie5win fudge ends */
+	}
+
+.x-grid3-cell-inner, .x-grid3-hd-inner { white-space:normal !important; }
+
+.rsultssummary{
+	text-align:center;
+	float:center;
+}
+.rsultsheader{
+	background-color:#0066CC;
+	color:white;
+	font-size:16px;
+	font-weight:bold;
+	font-family:arial;
+}
+.docheader{
+	background-color:#CCCCCC;
+	color:black;
+	font-size:11px;
+	font-weight:bold;
+	font-family:arial;
+}
+.normfont{
+	font-size:12px;
+	font-family:arial;
+	font-weight:normal;
+}
+
+.headerfont1{
+	font-size:14px;
+	font-family:arial;
+	font-weight:bold;
+}
+.srchtxtbg{
+	background-color:#FFFF99;
+	font-weight:bold;
+	color:black;
+}
+
+.srchtimebg{
+	background-color:#B0FFE6;
+	font-weight:bold;
+}
+
+.srchdsbg{
+	background-color:#FFE6CC;
+	font-weight:bold;
+}
+.x-window-body{
+	background-color:white
+}
+
+.icon-print { 
+	background-image: url(../images/printer.png) !important; 
+}
+.icon-close{
+	background-image: url(../images/closeicon.jpg) !important; 
+}
+
+.icon-clear{
+	background-image: url(../images/clearicon.png) !important; 
+}
+
+.icon-xls{
+	background-image: url(../images/icon_xls.png) !important; 
+
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/vertmenu.css">
+    <script type="text/javascript" src="extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/DIGGlobal.js"></script>
+    <script type="text/javascript" src="js/FormParser.js"></script>
+    <script type="text/javascript" src="js/ListParser.js"></script>
+    <script type="text/javascript" src="js/XMLDSParser.js"></script>
+    <script type="text/javascript" src="js/DIGSearch.js"></script>
+    <script type="text/javascript" src="js/Results.js"></script>
+    <script type="text/javascript" src="js/SearchTabs.js"></script>
+    <script type="text/javascript" src="js/DIGApp.js"></script>
+
+    <script type="text/javascript" src="js/ExcelExporter.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+       <!-- page specific -->
+	<script language="JavaScript">
+		$(document).ready(function(){
+			if($.cookie('hist') == null){
+				$.cookie('hist', '0', {expires:365, path:'/'});
+
+			}
+		});
+	</script>
+
+
+    <style>
+       .x-mask-msg .custom-mask-loading {
+	    background-image: url('images/blue-loading.gif');
+	    background-position: center center;
+	    height: 200px;
+	    width: 200px;
+	}
+
+    </style>
+	<script type="text/javascript">
+
+		Ext.Loader.setConfig({enabled: true});
+		Ext.Loader.setPath('Ext', 'extjs/src');
+		Ext.require(['*','Ext.ux.grid.Printer','Ext.ux.grid.FiltersFeature','Ext.ux.grid.PrintPanel']);
+
+		Ext.onReady(function(){
+			var ds = new XMLDSParser();
+			//ds.getDSXml();
+			//ds.getDSXmlJQ();
+			ds.getDSXmlJQRs();
+			var app = new DIGApp();
+		});
+	</script>
+
+<style>
+	.tb11 {
+		background:#FFFFFF url(images/search.png) no-repeat 4px 4px;
+		padding:4px 4px 4px 22px;
+		border:1px solid #CCCCCC;
+		width:530px;
+		height:30px;
+	}
+
+	.tblheader{
+		background-color:#006699;
+		color:white;
+		font-size:12px;
+		font-weight:bold;
+		font-family:arial;
+	}
+	.north .x-panel-header{
+		background-color:#0099CC;
+		color:white;
+	}
+	.smallfonts{
+		font-size:10px;
+		font-weight:normal;
+		color:#C0C0C0;
+		font-family:arial;
+	}
+	.x-btn {
+    		border:1px solid #C0C0C0;
+              float:left;
+	}
+	.x-btn-right{
+		float:right;
+	}
+	.x-noborder-btn{
+		float:left;
+	}
+       .x-searchbtn{
+		float:left;
+		margin-left:105px;
+	}
+	.bgimg{
+		background-image:url(images/icon_xls.jpg);
+	}
+
+	.printimg{
+		background-image:url(images/icon_print.jpg);
+	}
+
+       .x-frmheader{
+		text-align:left;
+		width:1150px;
+       }
+	.grid-class{
+		white-space:nowrap;
+	}
+
+	.x-panel-header, x-tabpanel-child, x-panel-header-default, x-horizontal, x-panel-header-horizontal,
+	x-panel-header-default-horizontal, x-top, x-panel-header-top, x-panel-header-default-top, x-unselectable,
+	x-docked, x-docked-top, x-panel-header-docked-top, x-panel-header-default-docked-top{
+		background-image:url('images/headerbg.jpg');
+		background-repeat:repeat;
+		background-position:top left;
+		border-bottom:0;
+		border-left:thin;
+		border-right:thin;
+
+	}
+
+
+	.x-tab-bar-body,
+	 x-tab-bar-body-default, x-tab-bar-body-default-top, x-tab-bar-body-default-horizontal, x-tab-bar-body-top, x-tab-bar-body-horizontal, x-box-layout-ct{
+		background-image:url('images/headerbg.jpg');
+		background-repeat:repeat;
+		background-position:top left;
+		border-top:0;
+		border-left:thin;
+		border-right:thin;
+	 }
+
+	.x-panel-body, x-panel-body-default, x-panel-body-default, x-docked-noborder-right, x-docked-noborder-bottom, x-docked-noborder-left, x-layout-fit{
+	       border-top:0;
+       }
+	.x-panel-header-text, x-panel-header-text-default{
+		color:white;
+		border-top:0;
+	}
+
+
+</style>
+
+</head>
+<body onLoad="javascript:LoggedIn()">
+<div id="tabscontainer"></div>
+
+</body>
+</html>
