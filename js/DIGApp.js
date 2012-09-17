@@ -4,6 +4,7 @@
 @version 1.0
 @last-modified 01/26/2012
 * Class to initialize application (gets called from dig.html)
+* This project is now on GIT (9/17/2012).
 */
 Ext.define('DIGApp',{
 	extend:'Ext.container.Viewport',
